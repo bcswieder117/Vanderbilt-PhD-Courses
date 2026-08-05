@@ -1,3 +1,1 @@
-Coming soon...
-
 **Course Description**: Broad survey of modeling medical robotics, including the robot itself, user actions, and the surgical scene. Review of recent papers on using computer vision to build models of surgical scenes and impacts of deep learning on the ability to distinguish different parts of surgery. Discussion of combining models of the surgical scene and surgeon actions in order to actively aid surgeons through both augmented reality and automation. Assumes background in deep learning and computer vision. FALL [3]
