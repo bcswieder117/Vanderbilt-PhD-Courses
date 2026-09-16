@@ -1,0 +1,1 @@
+This will be a collection of my course notes I wrote from my curiosity of linking my background of ECE, Mathematics, and AI to Mechanical Engineering and Robotics for this course. I will further organize these into subfolders within this directory.
