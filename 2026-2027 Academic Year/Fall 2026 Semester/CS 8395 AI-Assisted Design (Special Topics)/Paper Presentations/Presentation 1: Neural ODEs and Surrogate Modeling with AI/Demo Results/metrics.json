@@ -1,0 +1,161 @@
+{
+  "revision": "R4-Silverbox",
+  "config": {
+    "seed": 17,
+    "updates": 120,
+    "batch_size": 16,
+    "window_steps": 24,
+    "learning_rate": 0.002,
+    "hidden_width": 16,
+    "solver_step_samples": 0.5,
+    "initialization_samples": 50,
+    "validation_steps": 256,
+    "training_log_interval": 20
+  },
+  "normalization_training_only": {
+    "u_mean": 0.00619520458105763,
+    "u_scale": 0.022339458853019852,
+    "y_mean": 0.0008382275152541644,
+    "y_scale": 0.054978592678954205
+  },
+  "sampling_frequency_Hz": 610.35,
+  "source_archive_sha256": "2398dda503ac4c30f46c7a1ba09d8a8864d001cc71bbeb59f207a054cc592d8c",
+  "data_sha256": {
+    "train": "d998a66325f1c61288a3c01ef1de785cdd718445f5086cb7a09173c10aa478ca",
+    "validation": "c7f322097547bea0dd572d487b3495291bc694c379844608bc824fac742216a0",
+    "test": "97c4b47e6aaf7cfc79cb1720458f7077f32dffe46b6825f47c2498abddad8f18",
+    "high_amplitude": "67ef467d8d7e60ccf40a68d6a7c64f41e042f6013a3e1c1d45056e39c3047a43"
+  },
+  "code_sha256": "58d5a6fcd579675521e177446ffecd17575961d7a7d2517ed48faad21a0febf3",
+  "weights_sha256": "7ba61bc5a2e153c2f372e2c8aa98adb3ce3d6365e2a82be6e68d5da58028c120",
+  "scores": {
+    "Linear ODE": {
+      "test": {
+        "rmse_mV": 18.059694862134908,
+        "fit_percent": 67.8984194544711
+      },
+      "high_amplitude": {
+        "rmse_mV": 27.454486560534928,
+        "fit_percent": 66.68170225801873
+      }
+    },
+    "Neural ODE": {
+      "test": {
+        "rmse_mV": 5.70633069984292,
+        "fit_percent": 89.85684774970905
+      },
+      "high_amplitude": {
+        "rmse_mV": 22.565794579655897,
+        "fit_percent": 72.6145356631753
+      }
+    },
+    "Augmented Neural ODE": {
+      "test": {
+        "rmse_mV": 4.434986621010008,
+        "fit_percent": 92.1166951424413
+      },
+      "high_amplitude": {
+        "rmse_mV": 20.834032616785514,
+        "fit_percent": 74.71617251476715
+      }
+    }
+  },
+  "selected_updates": {
+    "Neural ODE": 120,
+    "Augmented Neural ODE": 120
+  },
+  "parameter_counts": {
+    "Linear ODE": 0,
+    "Neural ODE": 370,
+    "Augmented Neural ODE": 403
+  },
+  "history": {
+    "Neural ODE": [
+      {
+        "update": 1,
+        "training_loss": 0.03751742343744272,
+        "validation_mse_normalized": 0.06258718937968956
+      },
+      {
+        "update": 20,
+        "training_loss": 0.01774581099137743,
+        "validation_mse_normalized": 0.03312197316185918
+      },
+      {
+        "update": 40,
+        "training_loss": 0.0163102860790769,
+        "validation_mse_normalized": 0.014099825286451824
+      },
+      {
+        "update": 60,
+        "training_loss": 0.009105921923426045,
+        "validation_mse_normalized": 0.009465008599003448
+      },
+      {
+        "update": 80,
+        "training_loss": 0.004123042600664287,
+        "validation_mse_normalized": 0.00756965309261298
+      },
+      {
+        "update": 100,
+        "training_loss": 0.009954282575062853,
+        "validation_mse_normalized": 0.01111730167143086
+      },
+      {
+        "update": 120,
+        "training_loss": 0.012324167491557979,
+        "validation_mse_normalized": 0.005426158597866099
+      }
+    ],
+    "Augmented Neural ODE": [
+      {
+        "update": 1,
+        "training_loss": 0.03771329159974337,
+        "validation_mse_normalized": 0.06200482809235775
+      },
+      {
+        "update": 20,
+        "training_loss": 0.025951088637911627,
+        "validation_mse_normalized": 0.0403587446254938
+      },
+      {
+        "update": 40,
+        "training_loss": 0.01669090663095401,
+        "validation_mse_normalized": 0.019596185591367665
+      },
+      {
+        "update": 60,
+        "training_loss": 0.008818147647561796,
+        "validation_mse_normalized": 0.014541725925100845
+      },
+      {
+        "update": 80,
+        "training_loss": 0.0036259437306873994,
+        "validation_mse_normalized": 0.007573410162722347
+      },
+      {
+        "update": 100,
+        "training_loss": 0.009611748630731594,
+        "validation_mse_normalized": 0.010129604225704992
+      },
+      {
+        "update": 120,
+        "training_loss": 0.008148630605103211,
+        "validation_mse_normalized": 0.004572873127624701
+      }
+    ]
+  },
+  "step_halving_max_change_mV": 0.34293787069530207,
+  "validation_step_halving_max_change_mV": 0.29836183802399613,
+  "versions": {
+    "python": "3.12.14",
+    "torch": "2.8.0+cpu",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torchdiffeq": "0.2.5",
+    "matplotlib": "3.10.8"
+  },
+  "scored_samples_per_record": 1998,
+  "evaluation": "Two classroom subsets; first 50 measured outputs initialize state; all later predictions use input only. RMSE excludes prefix. Not full benchmark results.",
+  "elapsed_seconds": 69.32889844600004
+}

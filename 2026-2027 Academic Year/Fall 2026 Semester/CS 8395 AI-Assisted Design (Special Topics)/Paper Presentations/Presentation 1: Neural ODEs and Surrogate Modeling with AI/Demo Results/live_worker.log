@@ -1,0 +1,13 @@
+[   0.0 s] Importing NumPy, PyTorch, SciPy, and torchdiffeq
+[  11.6 s] Loaded PyTorch 2.14.1+cpu, NumPy 2.5.4, SciPy 1.18.1
+[  16.6 s] Reading and validating four Silverbox CSV files
+Windows fatal exception: code 0xc06d007f
+
+Current thread 0x000017ac (most recent call first):
+  File "c:\Users\Blain\anaconda3\envs\Swieder_env\Lib\site-packages\numpy\linalg\_linalg.py", line 2556 in lstsq
+  File "C:\Users\Blain\Downloads\Neural_ODE_Class_Materials\silverbox_demo.py", line 50 in prepare
+  File "C:\Users\Blain\Downloads\Neural_ODE_Class_Materials\silverbox_demo.py", line 124 in execute
+  File "C:\Users\Blain\Downloads\Neural_ODE_Class_Materials\silverbox_demo.py", line 245 in <module>
+
+Current thread's C stack trace (most recent call first):
+  <cannot get C stack on this system>

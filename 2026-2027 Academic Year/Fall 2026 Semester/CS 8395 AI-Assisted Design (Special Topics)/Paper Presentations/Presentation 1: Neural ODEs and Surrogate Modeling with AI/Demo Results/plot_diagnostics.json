@@ -1,0 +1,36 @@
+{
+  "test": {
+    "plotted_response_points": 1999,
+    "scored_forecast_points": 1998,
+    "duration_s": 3.2735315802408453,
+    "first_179_forecast_rmse_mV": 2.620573304135098,
+    "full_rmse_mV": 5.70633069984292,
+    "maximum_absolute_error_mV": 49.25034696002572,
+    "residual_definition": "prediction minus measurement",
+    "response_axis_mV": [
+      -350,
+      350
+    ],
+    "residual_axis_mV": [
+      -200,
+      200
+    ]
+  },
+  "high_amplitude": {
+    "plotted_response_points": 1999,
+    "scored_forecast_points": 1998,
+    "duration_s": 3.2735315802408453,
+    "first_179_forecast_rmse_mV": 4.8025677283642105,
+    "full_rmse_mV": 22.565794579655897,
+    "maximum_absolute_error_mV": 186.70696258763238,
+    "residual_definition": "prediction minus measurement",
+    "response_axis_mV": [
+      -350,
+      350
+    ],
+    "residual_axis_mV": [
+      -200,
+      200
+    ]
+  }
+}
